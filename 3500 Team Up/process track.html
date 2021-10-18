@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Process track</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+</head>
+<body class="body">
+    <nav>
+        <div class="logo">
+            <p>TeamUp</p>
+        </div>
+        <ul> 
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./process track.html">Work</a></li>
+            <li><a href="./chat.html">Chat</a></li>
+            <li><a href="./space.html">Space</a></li>
+            <li><a href="./calendar.html">Calendar</a></li>
+                
+        </ul>
+                
+    </nav>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Six walnuts</h2>
+        <ul> <!--How to Create the Side Navigation Bar Using HTML and CSS | Vertical Navigation Bar. (2019). 
+            Youtube. https://www.youtube.com/watch?v=YesSVqjcDts-->
+            <li><a href="./home.html"><i class="fas fa-home"></i>My Work</a></li>
+            <li><a href="./process track.html"><i class="fas fa-user"></i>Tracker</a></li>
+            <li><a href="./calendar.html"><i class="fas fa-address-card"></i>My Project</a></li>
+            <li><a href="./file share.html"><i class="fas fa-project-diagram"></i>Log</a></li>
+        </ul> 
+        <div class="social_media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+</div>
+
+<div class="btnToolbar">
+    <a id="btnCreateNewOrder" href="#" class="btn">New Task</a>
+    <a id="btnCreateNewList" href="#" class="btn">New List</a>
+  </div>
+  
+  <div class="orders">
+    <div class="columndone">
+        <div class="box" data-title="Done">
+            <div class="header">
+                Done
+            </div>
+            <div class="body">
+                <ul id="sortable1" class="droptrue">
+                    <li class="ui-state-highlight">Event</li>
+                    <li class="ui-state-highlight">Event</li>
+                    <li class="ui-state-highlight">Event</li>
+                    <li class="ui-state-highlight">Event</li>
+                    <li class="ui-state-highlight">Event</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  
+    <div class="columnin">
+        <div class="box" data-title="In Process">
+            <div class="header">
+                In Process
+            </div>
+            <div class="body">
+                <ul id="sortable2" class="dropfalse">
+                    <li class="ui-state-highlight">Event</li>
+                    <li class="ui-state-highlight">Event</li>
+                    <li class="ui-state-highlight">Event</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="columnto">
+      <div class="box" data-title="To Do">
+          <div class="header">
+              To Do
+          </div>
+          <div class="body">
+              <ul id="sortable4" class="dropfalse">
+                  <li class="ui-state-highlight">Event</li>
+                  <li class="ui-state-highlight">Event</li>
+                  <li class="ui-state-highlight">Event</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+    <div class="columnplan">
+        <div class="box" data-title="Plan">
+            <div class="header">
+                Plan
+            </div>
+            <div class="body">
+                <ul id="sortable3" class="droptrue">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+  </div>
+  
+  <br style="clear:both">
+  
+  <div id="dialog-form" title="Create new task">
+    <form>
+        <fieldset>
+            <label for="po">Name</label>
+            <input type="text" name="po" id="po" value="DECO3500" class="text ui-widget-content ui-corner-all">
+            <label for="company">Details</label>
+            <input type="text" name="company" id="company" value="Details" class="text ui-widget-content ui-corner-all">
+  
+            <label for="list">List</label>
+            <select id="list" name="list">
+                <option value="Done">Done</option>
+                <option value="To Do">To Do</option>
+                <option value="Plan">Plan</option>
+                <option value="In Process">In Process</option>
+            </select>
+  
+            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+        </fieldset>
+    </form>
+  </div>
+  
+  <div id="dialog-form-list" title="Create new list">
+    <form id="formList">
+        <fieldset>
+            <label for="listname">List Name</label>
+            <input type="text" name="listname" id="listname" value="Untitled" class="text ui-widget-content ui-corner-all">
+  
+            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+        </fieldset>
+    </form>
+  </div>
+  
+  <!--jQuery Trello Board Example. (2016). 
+    Github. https://github.com/zhaff/jquery-trello-board-example-->>
+  <script>
+    $(function () {
+        function initSortable() {
+            $(".column").sortable({
+                connectWith: ".column",
+                handle: ".header",
+            });
+  
+  
+            $("ul.droptrue").sortable({
+                connectWith: "ul"
+            });
+  
+            $("ul.dropfalse").sortable({
+                connectWith: "ul",
+            });
+  
+            $("#sortable1, #sortable2, #sortable3,#sortable4").disableSelection();
+        }
+  
+        initSortable();
+  
+        $(".btn")
+                .button()
+                .click(function (event) {
+                    event.preventDefault();
+                });
+  
+        function addOrder() {
+            var valid = true;
+  
+            if (valid) {
+                selectedList = $('#list').find(":selected").text();
+                box = $('div').find("[data-title='" + selectedList + "']");
+                boxList = box.find('ul');
+  
+                var po = $('#po').val();
+                var company = $('#company').val();
+  
+                boxList.append("<li class=\"ui-state-highlight\">" + po + " - " + company + "</li>");
+
+                dialog.dialog("close");
+            }
+            return valid;
+        }
+  
+        dialog = $("#dialog-form").dialog({
+            autoOpen: false,
+            height: 380,
+            width: 350,
+            modal: true,
+            buttons: {
+                "Create new task": addOrder,
+                Cancel: function () {
+                    dialog.dialog("close");
+                }
+            },
+            close: function () {
+            }
+        });
+  
+        function addList() {
+
+            bodyWidth = $("body").width();
+            nextWidth = bodyWidth + 300;
+            $('body').css('width', nextWidth + 'px');
+  
+            var listName = $('#listname').val();
+  
+            $("div.orders").append("<div class=\"column\">" +
+                    "<div class=\"box\" data-title=\"" + listName + "\">" +
+                    "<div class=\"header\">" +
+                    "    " + listName +
+                    "</div>" +
+                    "<div class=\"body\">" +
+                    "    <ul id=\"sortable3\" class=\"droptrue\">" +
+                    "    </ul>" +
+                    "</div>" +
+                    "</div></div>");
+  
+            initSortable();
+
+            // List = $('div').find('title="Create new task"' + "']").find('select');
+            list = $('#list');
+            list.append("<option value=\"\">" + listName + "</option>");
+
+            dialogList.dialog("close");
+        }
+  
+        dialogList = $("#dialog-form-list").dialog({
+            autoOpen: false,
+            height: 250,
+            width: 350,
+            modal: true,
+            buttons: {
+                "Create new list": addList,
+                Cancel: function () {
+                    dialogList.dialog("close");
+                }
+            },
+            close: function () {
+            }
+        });
+  
+        form = dialog.find("form").on("submit", function (event) {
+            event.preventDefault();
+            addOrder();
+        });
+  
+        form = dialog.find("#formList").on("submit", function (event) {
+            event.preventDefault();
+            addList();
+        });
+  
+        $("#btnCreateNewOrder").button().on("click", function () {
+            dialog.dialog("open");
+        });
+  
+        $("#btnCreateNewList").button().on("click", function () {
+            dialogList.dialog("open");
+        });
+    });
+  
+  </script>
+  
+  </body>
+  </html>
