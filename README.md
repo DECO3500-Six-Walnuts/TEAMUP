@@ -4,8 +4,6 @@ this is SIXWALNUTS from deco3500
 
 our project is TEAMUP
 
-working process is in Wiki:
-
 Ongoing documentation of work: https://github.com/DECO3500-Six-Walnuts/TEAMUP/wiki/documentation
 
 ## Promotional Material
