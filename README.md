@@ -4,7 +4,7 @@ this is SIXWALNUTS from deco3500
 
 our project is TEAMUP
 
-Adobe XD prototype: https://uqz.zoom.com.cn/j/88311141214
+Adobe XD prototype: https://xd.adobe.com/view/5146450e-47e2-4cff-a2f9-5c786d6e66da-0415/?fullscreen
 
 Ongoing documentation of work: https://github.com/DECO3500-Six-Walnuts/TEAMUP/wiki/documentation
 
