@@ -9,9 +9,11 @@ Ongoing documentation of work: https://github.com/DECO3500-Six-Walnuts/TEAMUP/wi
 ## Promotional Material
 
 poster 
+
 <a href="https://ibb.co/bdH6Yhn"><img src="https://i.ibb.co/LpQ0Bwf/poster.jpg" alt="poster" border="0" /></a>
 
 information sheet 
+
 <a href="https://ibb.co/qBPZzXm"><img src="https://i.ibb.co/R2V51ZQ/sheet.jpg" alt="sheet" border="0" /></a>
 
 ## Files
