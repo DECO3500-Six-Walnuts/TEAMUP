@@ -31,5 +31,5 @@ javascript file (inside html files) - Implementing the interactive functions
 ## Instruction
 1. Download the repository
 2. Unzip and open the folder
-3. Locate the file and open the process track.html in a web browser
+3. Locate the file and open the 'process track.html' in a web browser
 4. The page 'WORK' is functional and interactive, use it! 
